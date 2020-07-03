@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 import { Container } from './components/Site';
 import MenuSite from './components/MenuSite';
+import Header from './components/Header';
 
 const Cadastro = () => {
     return (
@@ -13,10 +14,7 @@ const Cadastro = () => {
                 <title>Cadastro</title>
             </Head>
             <MenuSite />
-            <header>
-                <h1>Olá!</h1>
-                <h2>Que bom que você está aqui.</h2>
-            </header>
+            <Header />
             <section className="info-cadastro">
                 <h1>Qual seu perfil?</h1>
                 <div>
@@ -29,7 +27,7 @@ const Cadastro = () => {
                         </Link>
                     </div>
                     <div>
-                        <Link href='/restaurantes/cadastro'>
+                        <Link href='/cadastro-restaurante'>
                             <div className="restaurante">
                                 <img src='img/perfil_restaurante.svg' />
                                 <p>Tenho um restaurante</p>

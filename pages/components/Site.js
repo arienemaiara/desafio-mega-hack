@@ -155,7 +155,12 @@ export const Container = styled.div`
                 }
             }
         }
-    } 
+    }
+
+    .form-cadastro {
+        max-width: 750px;
+        margin-top: -80px;
+    }
 
     @media(min-width: 768px) and (max-width: 991px) {
         
