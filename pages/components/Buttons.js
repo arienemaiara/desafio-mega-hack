@@ -47,4 +47,8 @@ export const GradientButton = styled.button`
     }
 `;
 
-export default Button = styled.button``;
+const Button = styled.button`
+    border: 0;
+`;
+
+export default Button;

@@ -3,9 +3,6 @@ import styled from 'styled-components';
 //import * as screenType from '../../utils/screenSize';
 //import * as Screen from './components/MediaQueries';
 
-export default NavBar = styled.nav`
-`;
-
 export const Container = styled.div`
     display: flex;
     flex: 1;
@@ -170,3 +167,8 @@ export const Container = styled.div`
        
     }
 `;
+
+const NavBar = styled.nav`
+`;
+
+export default NavBar;
