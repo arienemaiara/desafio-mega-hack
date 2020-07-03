@@ -11,7 +11,7 @@ const Card = styled.div`
         margin: 10px 0;
     }
 
-    span {
+    .highlight {
         color: var(--primary);
     }
 
@@ -22,6 +22,12 @@ const Card = styled.div`
     li {
         list-style: none;
         margin: 5px 0;
+    }
+
+    .buttonLine {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
     }
 `;
 

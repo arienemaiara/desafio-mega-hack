@@ -5,7 +5,7 @@ const Container = styled.div`
     flex: 1;
     justify-content: space-around;
     align-items: flex-start;
-    height: 100%;
+    height: 100vh;
     padding: 40px;
     background-color: var(--lightGray);
 
