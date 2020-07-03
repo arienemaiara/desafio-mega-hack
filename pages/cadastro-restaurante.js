@@ -172,7 +172,7 @@ const CadastroParte2 = ({ onSubmit }) => {
 
 const CadastroResturante = () => {
 
-    const [parteCadastro, setParteCadastro] = useState(2);
+    const [parteCadastro, setParteCadastro] = useState(1);
     const [subtitulo, setSubtitulo] = useState('Conte-nos um pouco sobre você')
 
     const onSubmitParte1 = (data) => {

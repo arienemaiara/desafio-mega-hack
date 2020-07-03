@@ -1,8 +1,5 @@
 import styled from 'styled-components';
 
-//import * as screenType from '../../utils/screenSize';
-//import * as Screen from './components/MediaQueries';
-
 export const Container = styled.div`
     display: flex;
     flex: 1;
@@ -18,6 +15,10 @@ export const Container = styled.div`
         padding: 50px;
         color: #FFF;
 
+        @media(max-width: 1620px) {
+            background-position: 0 -50px;
+        }
+
         h1 {
             font-size: 48px;
             line-height: 72px;
@@ -32,7 +33,7 @@ export const Container = styled.div`
     
     > section {
         display: flex;
-        padding: 40px;
+        padding: 0 30px;
 
         h1 {
             color: #FFF;
@@ -66,6 +67,17 @@ export const Container = styled.div`
             background-size: cover;
             background-position: 0 -200px;
 
+            @media(max-width: 1620px) {
+                height: 800px;
+                background-position: 0 0;
+            }
+
+            @media(max-width: 780px) {
+                .img-container {
+                    display: none;
+                }
+            }
+
             h3 {
                 color: #FFF;
                 font-weight: normal;
@@ -96,6 +108,16 @@ export const Container = styled.div`
             background-size: cover;
             background-position-y: -360px;
             height: 1400px;
+
+            @media(max-width: 1620px) {
+                height: 1050px;
+                background-position-y: -259px;
+            }
+
+            @media(max-width: 1024px) {
+                height: 800px;
+                background-position-y: -200px;
+            }
         }
 
         > div {
@@ -103,6 +125,10 @@ export const Container = styled.div`
             padding: 50px;
         }
         
+    }
+
+    img {
+        max-width: 100%;
     }
 
     .texto-gradient { 

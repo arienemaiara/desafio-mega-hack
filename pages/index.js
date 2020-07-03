@@ -16,13 +16,13 @@ const Home = () => {
 			<MenuSite />
 			<section className='hero-section'>
 				<div>
-					<h1>Os melhores restaurantes <br/><strong>estão aqui</strong></h1>
+					<h1>Os melhores restaurantes <strong>estão aqui</strong></h1>
 					<h3>
 						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, laudantium adipisci qui quaerat veniam esse odit! Illum quo culpa labore! Tempore modi eaque nobis aut ex cupiditate voluptatum eum a?
 					</h3>
 					<Link href='/cadastro'><a>Cadastre-se</a></Link>
 				</div>
-				<div>
+				<div className='img-container'>
 					<img src='img/hero-img.png' alt='Imagem principal' />
 				</div>
       		</section>
