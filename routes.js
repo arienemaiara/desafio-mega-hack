@@ -1,0 +1,15 @@
+const routes = require('next-routes');
+
+module.exports = routes()
+    .add('/', 'index')
+    .add('/sobre', 'sobre')
+    .add('/restaurantes/login', 'restaurante/login')
+    .add('/restaurantes/cadastro', 'restaurante/cadastro')
+    .add('/restaurante/painel', 'restaurante/painel')
+    .add('/restaurante/reservas', 'restaurante/reservas')
+    .add('/restaurante/pedidos', 'restaurante/pedidos')
+    .add('/restaurante/avaliacao', 'restaurante/avaliacao')
+    .add('/restaurantes', 'restaurantes')
+    .add('/restaurantes/:id', 'restaurante/detalhe')
+    .add('/clientes/login', 'cliente/login')
+    .add('/clientes/cadastro', 'cliente/cadastro')
