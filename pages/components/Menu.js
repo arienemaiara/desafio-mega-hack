@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 
 const Menu = styled.div`
-    height: 100vh;
-    min-width: 250px;
+    min-height: 100vh;
+    min-width: 230px;
     background-color: #FFF;
     box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.25);
-    z-index: 2;
+    z-index: 4;
     display: ${({ open }) => open ? 'block' : 'none'};
 
     > ul {
-        margin: 20px 0;
+        padding: 20px 0;
 
         > li {
             padding: 10px 0;

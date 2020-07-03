@@ -5,12 +5,13 @@ const Container = styled.div`
     flex: 1;
     justify-content: space-around;
     align-items: flex-start;
-    height: 100vh;
+    min-height: 100vh;
     padding: 20px 10px;
     background-color: var(--lightGray);
 
     > div, > section {
         flex: 1;
+        width: 100%;
     }
 
     section {
@@ -20,6 +21,11 @@ const Container = styled.div`
     h2 {
         font-size: 18px;
         margin-bottom: 10px;
+    }
+
+    @media (max-width: 991px) {
+        flex-direction: column;
+        padding-top: 50px;
     }
 
 `;

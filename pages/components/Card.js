@@ -28,6 +28,16 @@ const Card = styled.div`
         display: flex;
         justify-content: space-around;
         margin-top: 20px;
+
+        > button {
+            margin: 2px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .buttonLine {
+            flex-direction: column
+        }
     }
 `;
 
