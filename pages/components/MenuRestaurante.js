@@ -1,11 +1,22 @@
 import React from 'react';
 import Link from 'next/link';
 
-import Menu from './Menu';
+import Menu, { MenuMobile, StyledBurger } from './Menu';
 
-const MenuRestaurante = () => {
+const Burger = ({ open, setOpen }) => {
     return (
-        <Menu>
+        <StyledBurger open={open} onClick={() => setOpen(!open)}>
+            <div />
+            <div />
+            <div />
+        </StyledBurger>
+    )
+}
+
+const MenuRestaurante = ({ open }) => {
+
+    return (
+        <Menu open={open}>
             <header>
 
             </header>
@@ -17,7 +28,19 @@ const MenuRestaurante = () => {
                 <Link href='/'><li><a><img src='../img/menu/cardapio.svg' />Cardápio</a></li></Link>
             </ul>
         </Menu>
-    );
+    )
+
 }
 
-export default MenuRestaurante;
+export default function Teste() {
+
+    const node = React.useRef();
+    const [open, setOpen] = React.useState(false);
+
+    return (
+        <div ref={node}>
+            <MenuMobile><Burger open={open} setOpen={setOpen} /></MenuMobile>
+            <MenuRestaurante open={open} setOpen={setOpen} />
+        </div>
+    )
+}
