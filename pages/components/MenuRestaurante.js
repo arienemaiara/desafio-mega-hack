@@ -33,7 +33,7 @@ const MenuRestaurante = ({ open }) => {
 
 }
 
-export default function Teste() {
+export default function MenuLateral() {
 
     const [open, setOpen] = React.useState(false);
 

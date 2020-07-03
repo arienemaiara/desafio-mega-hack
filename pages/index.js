@@ -1,19 +1,26 @@
 import React from 'react';
 
+import Head from 'next/head';
 import Link from 'next/link';
 
 import { Container } from './components/Site';
-//import * as Screen from './components/MediaQueries';
+import MenuSite from './components/MenuSite';
+import { GradientButton } from './components/Buttons';
 
 const Home = () => {
 	return (
 		<Container>
+			<Head>
+				<title>Solução para restaurantes</title>
+			</Head>
+			<MenuSite />
 			<section className='hero-section'>
 				<div>
-					<h1>Os melhores restaurantes <strong>estão aqui</strong></h1>
+					<h1>Os melhores restaurantes <br/><strong>estão aqui</strong></h1>
 					<h3>
 						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, laudantium adipisci qui quaerat veniam esse odit! Illum quo culpa labore! Tempore modi eaque nobis aut ex cupiditate voluptatum eum a?
 					</h3>
+					<Link href='/cadastro'><a>Cadastre-se</a></Link>
 				</div>
 				<div>
 					<img src='img/hero-img.png' alt='Imagem principal' />
@@ -24,7 +31,7 @@ const Home = () => {
 					<img src='img/img_inicio.svg' alt='Imagem principal' />
 				</div>
 				<div>
-					<h2>Bem-vindo ao [nome do projeto]!</h2>
+					<h2 className="texto-gradient">Bem-vindo ao [nome do projeto]!</h2>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. A
 						molestie arcu pellentesque quis fermentum, consectetur. Adipiscing
@@ -34,25 +41,17 @@ const Home = () => {
 						lobortis aliquet sed risus commodo facilisis in. Dui congue mauris
 						consequat id.
 					</p>
-					<Link href='/cadastro'><a>Cadastre-se</a></Link>
+					<Link href='/cadastro'><GradientButton>Cadastre-se</GradientButton></Link>
 				</div>
 			</section>
 			<section className='informacoes'>
 				<div>
-				<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. A
-						molestie arcu pellentesque quis fermentum, consectetur. Adipiscing
-						a, venenatis facilisis sed. Nulla integer pellentesque nisi
-						consequat posuere imperdiet tincidunt suspendisse sed. Nibh nulla
-						pharetra maecenas sit cursus cursus vitae. A nunc accumsan
-						lobortis aliquet sed risus commodo facilisis in. Dui congue mauris
-						consequat id.
-					</p>
+					
 				</div>
 			</section>
 			<section className='call-to-action'>
 				<div>
-					<h2>Novas experiências de restaurantes</h2>
+					<h2 className="texto-gradient">Novas experiências de restaurantes</h2>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. A
 						molestie arcu pellentesque quis fermentum, consectetur. Adipiscing
@@ -62,7 +61,7 @@ const Home = () => {
 						lobortis aliquet sed risus commodo facilisis in. Dui congue mauris
 						consequat id.
 					</p>
-					<Link href='/cadastro'><a>Cadastre-se</a></Link>
+					<Link href='/cadastro'><GradientButton>Cadastre-se</GradientButton></Link>
 				</div>
 				<div>
 					
