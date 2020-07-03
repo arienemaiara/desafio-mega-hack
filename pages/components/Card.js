@@ -55,6 +55,34 @@ const Card = styled.div`
         margin: 20px 0 30px;
     }
 
+    &.form-cardapio {
+        max-width: 495px;
+    }
+
+    &.item-cardapio {
+        margin: 10px 0;
+        cursor: pointer;
+
+        .categoria {
+            font-size: 12px;
+            color: var(--textGray);
+            font-weight: 500;
+            line-height: 29px;
+        }
+
+        .nome {
+            text-align: center;
+            font-size: 16px;
+            line-height: 29px;
+            margin: 10px 0;
+        }
+
+        .preco {
+            font-weight: 500;
+            text-align: center;
+        }
+    }
+
     @media (max-width: 991px) {
         .buttonLine {
             flex-direction: column

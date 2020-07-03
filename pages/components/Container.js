@@ -23,6 +23,32 @@ const Container = styled.div`
         margin-bottom: 10px;
     }
 
+    .lista-cardapio {
+        max-width: 350px;
+        max-height: 100vh;
+        background-color: #FFF;
+        margin: -20px -10px;
+        padding: 40px 20px;
+
+        overflow-y: scroll;
+
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #CCC;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background-color: #EEE;
+        }
+
+        @media (max-width: 991px) {
+            max-width: 100%;
+        }
+    }
+
     @media (max-width: 991px) {
         flex-direction: column;
         padding-top: 50px;

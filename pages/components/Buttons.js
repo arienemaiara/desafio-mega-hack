@@ -30,5 +30,19 @@ export const OutlineButton = styled.button`
     &:hover {
         opacity: 0.7;
     }
-    
+`;
+
+export const GradientButton = styled.button`
+    border: 0;
+    background: linear-gradient(179.68deg, var(--primary) -13.56%, var(--secondary) 158.3%);
+    border-radius: 100px;
+    padding: 12px;
+    color: #FFF;
+    cursor: pointer;
+
+    transition: all .2s linear;
+
+    &:hover {
+        background: linear-gradient(179.68deg, var(--secondary) -13.56%, var(--primary) 158.3%);
+    }
 `;

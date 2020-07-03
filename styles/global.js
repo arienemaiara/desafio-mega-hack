@@ -19,6 +19,10 @@ const GlobalStyles = createGlobalStyle`
         color: var(--textColor);
     }
 
+    input:focus, button:focus {
+        outline: none;
+    }
+
     :root {
         --primary: #FF8000;
         --secondary: #C0272D;
