@@ -34,13 +34,12 @@ const MenuRestaurante = ({ open }) => {
 
 export default function Teste() {
 
-    const node = React.useRef();
     const [open, setOpen] = React.useState(false);
 
     return (
-        <div ref={node}>
+        <>
             <MenuMobile><Burger open={open} setOpen={setOpen} /></MenuMobile>
             <MenuRestaurante open={open} setOpen={setOpen} />
-        </div>
+        </>
     )
 }

@@ -6,9 +6,20 @@ const Card = styled.div`
     border-radius: 15px;
     padding: 20px;
 
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
     h3 {
         text-align: center;
         margin: 10px 0;
+    }
+
+    .info-numero {
+        font-size: 22px;
+        font-weight: 500;
     }
 
     .highlight {
@@ -17,6 +28,12 @@ const Card = styled.div`
 
     strong {
         font-size: 18px;
+    }
+
+    hr {
+        border: 1px solid #DDD;
+        border-radius: 5px;
+        margin: 10px 0;
     }
 
     li {
@@ -32,6 +49,10 @@ const Card = styled.div`
         > button {
             margin: 2px;
         }
+    }
+
+    .progressBarContainer {
+        margin: 20px 0 30px;
     }
 
     @media (max-width: 991px) {

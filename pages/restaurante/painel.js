@@ -5,6 +5,7 @@ import MenuRestaurante from '../components/MenuRestaurante';
 import Container from '../components/Container';
 import CardsPedidos from '../components/CardsPedidos';
 import Card from '../components/Card';
+import ProgressBar from '../components/ProgressBar';
 import { OutlineButton } from '../components/Buttons'; 
 
 const Pedido = () => (
@@ -45,6 +46,23 @@ const Painel = () => {
                     </section>
                     <section>
                         <h2>Capacidade</h2>
+                        <Card>
+                            <div className="progressBarContainer">
+                                <p>80%</p>
+                                <ProgressBar width={80} />
+                            </div>
+                            <hr />
+                            <div className="row">
+                                <div>
+                                    <h4>Pessoas</h4>
+                                    <strong className="info-numero">150</strong>
+                                </div>
+                                <div>
+                                    <h4>Mesas reservadas</h4>
+                                    <strong className="info-numero">5</strong>
+                                </div>
+                            </div>
+                        </Card>
                     </section>
                 </div>
                 <section>

@@ -12,7 +12,7 @@ const Menu = styled.div`
         padding: 20px 0;
 
         > li {
-            padding: 10px 0;
+            padding: 10px 20px;
             display: flex;
 
             cursor: pointer;
