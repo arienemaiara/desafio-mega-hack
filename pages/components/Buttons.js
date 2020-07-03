@@ -46,3 +46,5 @@ export const GradientButton = styled.button`
         background: linear-gradient(179.68deg, var(--secondary) -13.56%, var(--primary) 158.3%);
     }
 `;
+
+export default Button = styled.button``;

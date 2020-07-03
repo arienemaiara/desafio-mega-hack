@@ -139,8 +139,8 @@ const CadastroParte2 = ({ onSubmit }) => {
                     <label for="mascara">Utilização de máscara para os funcionários</label>
                 </div>
                 <div>
-                    <input type="checkbox" name="alcool_gel" ref={register} />
-                    <label for="alcool_gel">Oferecimento de álcool em gel para os clientes na entrada do estabelecimento</label>
+                    <input type="checkbox" name="alcool_gel_entrada" ref={register} />
+                    <label for="alcool_gel_entrada">Oferecimento de álcool em gel para os clientes na entrada do estabelecimento</label>
                 </div>
                 <div>
                     <input type="checkbox" name="alcool_gel_mesa" ref={register} />
@@ -163,6 +163,9 @@ const CadastroParte2 = ({ onSubmit }) => {
                     <label for="mascara_luva">Obrigatoriedade de uso de máscaras e luvas descartáveis em caso de buffets self-services</label>
                 </div>
             </section>
+            <div>
+                <GradientButton>Confirmar</GradientButton>
+            </div>
         </Form>
     )
 }
@@ -176,6 +179,10 @@ const CadastroResturante = () => {
         console.log(data);
         setParteCadastro(2);
         setSubtitulo('Agora vamos falar de capacidade e segurança')
+    };
+
+    const onSubmitParte2 = (data) => {
+        console.log(data);
     };
 
     return (
@@ -192,7 +199,7 @@ const CadastroResturante = () => {
                 <div className="form-cadastro">
                     {parteCadastro === 1 ?
                         <CadastroParte1 onSubmit={onSubmitParte1} />
-                        : <CadastroParte2 />
+                        : <CadastroParte2 onSubmit={onSubmitParte2} />
                     }
                 </div>
 

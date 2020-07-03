@@ -3,7 +3,7 @@ import styled from 'styled-components';
 //import * as screenType from '../../utils/screenSize';
 //import * as Screen from './components/MediaQueries';
 
-export const NavBar = styled.nav`
+export default NavBar = styled.nav`
 `;
 
 export const Container = styled.div`
