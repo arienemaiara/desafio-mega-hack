@@ -3,6 +3,7 @@ const routes = require('next-routes');
 module.exports = routes()
     .add('/', 'index')
     .add('/sobre', 'sobre')
+    .add('/cadastro', 'cadastro-home')
     .add('/restaurantes/login', 'restaurante/login')
     .add('/restaurantes/cadastro', 'restaurante/cadastro')
     .add('/restaurante/painel', 'restaurante/painel')

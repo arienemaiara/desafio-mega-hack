@@ -8,11 +8,13 @@
     "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
+    "@svgr/webpack": "^5.4.0",
     "axios": "^0.19.2",
     "next": "9.4.4",
     "next-routes": "^1.4.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-responsive": "^8.1.0",
     "styled-components": "^5.1.1"
   },
   "devDependencies": {

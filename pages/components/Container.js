@@ -6,7 +6,7 @@ const Container = styled.div`
     justify-content: space-around;
     align-items: flex-start;
     height: 100vh;
-    padding: 40px;
+    padding: 20px 10px;
     background-color: var(--lightGray);
 
     > div, > section {

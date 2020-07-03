@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Page from '../components/Page';
+import MenuRestaurante from '../components/MenuRestaurante';
 import Container from '../components/Container';
 import CardsPedidos from '../components/CardsPedidos';
 import Card from '../components/Card';
@@ -23,8 +25,9 @@ const Pedido = () => (
 
 const Painel = () => {
     return (
-        <>
+        <Page>
             <title>Painel | Restaurante</title>
+            <MenuRestaurante />
             <Container>
                 <div>
                     <section>
@@ -58,7 +61,7 @@ const Painel = () => {
                     </CardsPedidos>
                 </section>
             </Container>
-        </>
+        </Page>
 
     );
 }
