@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import cep from 'cep-promise'
+import cep from 'cep-promise';
+import { toast } from 'react-toastify';
 
 import Head from 'next/head';
-import Link from 'next/link';
+import Router from 'next/router'
 
 import { Container } from './components/Site';
 import MenuSite from './components/MenuSite';
@@ -21,7 +22,7 @@ const CadastroParte1 = ({ onSubmit }) => {
         const cepValue = e.target.value;
         cep(cepValue)
             .then(setEnderecoCEP)
-            .catch(() => console.log('erro consulta'))
+            .catch(() => toast.error('CEP não encontrado!'))
     }
 
     return (
@@ -186,7 +187,7 @@ const CadastroParte2 = ({ onSubmit }) => {
     )
 }
 
-const CadastroResturante = () => {
+const CadastroRestaurante = () => {
 
     const [parteCadastro, setParteCadastro] = useState(1);
     const [subtitulo, setSubtitulo] = useState('Conte-nos um pouco sobre você')
@@ -199,19 +200,18 @@ const CadastroResturante = () => {
     };
 
     const onSubmitParte2 = async (data) => {
-        console.log(cadastro1);
-        console.log(data);
-
         const formData = {...cadastro1, ...data}
 
         const response = await api.post('/restaurantes', formData);
 
         if (response.status === 201) {
             //Grava informação do restaurante no local storage
-            localStorage.setItem('restaurante', response.data);
+            localStorage.setItem('restaurante', JSON.stringify(response.data));
+            toast.success('Dados cadastrados com sucesso!');
+            Router.push('/restaurante/painel');
         }
         else {
-
+            toast.error('Erro ao cadastrar os dados. Tente novamente.')
         }
     };
 
@@ -238,4 +238,4 @@ const CadastroResturante = () => {
     )
 }
 
-export default CadastroResturante;
+export default CadastroRestaurante;

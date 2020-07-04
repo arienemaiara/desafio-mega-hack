@@ -17,6 +17,8 @@ const GlobalStyles = createGlobalStyle`
         font-family: 'Poppins', sans-serif;
         font-size: 14px;
         color: var(--textColor);
+        text-rendering: optimizeLegibility !important;
+        -webkit-font-smoothing: antialiased;
     }
 
     input:focus, button:focus {

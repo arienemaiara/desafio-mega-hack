@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
 import Page from '../components/Page';
 import MenuRestaurante from '../components/MenuRestaurante';
@@ -25,6 +25,17 @@ const Pedido = () => (
 )
 
 const Painel = () => {
+
+    const [dadosRestaurante, setDadosRestaurante] = useState();
+
+    useEffect(() => {
+        if(typeof(Storage) !== "undefined"){
+            const restaurante = JSON.parse(localStorage.getItem('restaurante'))
+            setDadosRestaurante(restaurante)
+        }
+    }, []);
+    
+
     return (
         <Page>
             <title>Painel | Restaurante</title>
@@ -83,5 +94,10 @@ const Painel = () => {
 
     );
 }
+
+// // Painel.getInitialProps = () => {
+// //     const restaurante = localStorage.getItem('restaurante')
+// //     return { restaurante }
+// // }
 
 export default Painel;
