@@ -23,8 +23,9 @@ const Navbar = styled.nav`
     ul {
         display: flex;
         flex: 1;
-        justify-content: space-around;
+        justify-content: flex-end;
         align-items: center;
+        margin-right: 50px;
 
         li {
             list-style: none;
