@@ -95,15 +95,6 @@ export const Container = styled.div`
             background-position-y: -360px;
             height: 1400px;
 
-            /* @media(max-width: 1620px) {
-                height: 1050px;
-                background-position-y: -259px;
-            }
-
-            @media(max-width: 1024px) {
-                height: 800px;
-                background-position-y: -200px;
-            } */
         }
 
         > div {
@@ -177,7 +168,18 @@ export const Container = styled.div`
         header {
             background-image: none;
             background: var(--primary);
-            height: 300px;
+            height: 200px;
+
+            padding: 10px 20px;
+
+            h1 {
+                font-size: 36px;
+            }
+
+            h2 {
+                font-size: 28px;
+                line-height: 1.2;
+            }
         }
 
         > section {
@@ -221,6 +223,12 @@ export const Container = styled.div`
                     margin: 20px 0;
                 }
             }
+        }
+
+        .form-cadastro {
+            width: 100%;
+            padding: 0;
+            margin: 20px 0 40px;
         }
 
     }

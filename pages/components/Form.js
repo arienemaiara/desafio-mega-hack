@@ -90,6 +90,41 @@ const Form = styled.form`
             margin-right: 15px;
         }
     }
+
+    /* larger desktops */
+    @media(min-width: 1680px) {
+       
+    }
+
+    /* normal desktops */
+    @media(min-width: 1280px) {
+        
+    }
+
+    /* small desktops */
+    @media(min-width: 1024px) and (max-width: 1680px) {
+
+    }
+
+    /* tablets */
+    @media(min-width: 768px) {
+        
+    }
+
+    /* cellphones */
+    @media(max-width: 768px) {
+        .input-group {
+            flex-direction: column;
+
+            div:first-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    
+
+    
 `;
 
 export default Form;

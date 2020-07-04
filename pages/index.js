@@ -11,7 +11,7 @@ const Home = () => {
 	return (
 		<Container>
 			<Head>
-				<title>Solução para restaurantes</title>
+				<title>Cuisine Lovers | Seu restaurante seguro</title>
 			</Head>
 			<MenuSite />
 			<section className='hero-section'>
