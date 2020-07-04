@@ -6,6 +6,7 @@ export const Container = styled.div`
     flex-direction: column;
     min-height: 100vh;
 
+
     header {
         height: 400px;
         background-image: url('img/bg_header.svg');
@@ -14,10 +15,6 @@ export const Container = styled.div`
         background-position: 0 -200px;
         padding: 50px;
         color: #FFF;
-
-        @media(max-width: 1620px) {
-            background-position: 0 -50px;
-        }
 
         h1 {
             font-size: 48px;
@@ -67,17 +64,6 @@ export const Container = styled.div`
             background-size: cover;
             background-position: 0 -200px;
 
-            @media(max-width: 1620px) {
-                height: 800px;
-                background-position: 0 0;
-            }
-
-            @media(max-width: 780px) {
-                .img-container {
-                    display: none;
-                }
-            }
-
             h3 {
                 color: #FFF;
                 font-weight: normal;
@@ -109,7 +95,7 @@ export const Container = styled.div`
             background-position-y: -360px;
             height: 1400px;
 
-            @media(max-width: 1620px) {
+            /* @media(max-width: 1620px) {
                 height: 1050px;
                 background-position-y: -259px;
             }
@@ -117,7 +103,7 @@ export const Container = styled.div`
             @media(max-width: 1024px) {
                 height: 800px;
                 background-position-y: -200px;
-            }
+            } */
         }
 
         > div {
@@ -185,11 +171,101 @@ export const Container = styled.div`
         margin-top: -80px;
     }
 
-    @media(min-width: 768px) and (max-width: 991px) {
+    /* cellphones */
+    @media(max-width: 768px) {
+
+        header {
+            background-image: none;
+            background: var(--primary);
+            height: 300px;
+        }
+
+        > section {
+
+            > div {
+                padding: 10px;
+            }
+
+            &.hero-section {
+                height: 800px;
+                background-position: 0;
+            }
+
+            h1 {
+                color: #FFF;
+                font-size: 36px;
+                line-height: 1.2;
+                margin-top: 50px;
+            }
+
+            &.informacoes {
+                height: 600px;
+                background: linear-gradient(179.68deg, var(--primary) -13.56%, var(--secondary) 158.3%);
+                margin: 30px 0;
+            }
+            
+        }
+
+        .img-container {
+            display: none;
+        }
+
+        .info-cadastro {
+            margin-top: 0;
+
+            > div {
+                flex-direction: column;
+
+                > div {
+                    width: initial;
+                    margin: 20px 0;
+                }
+            }
+        }
+
+    }
+
+    /* tablets */
+    @media(min-width: 768px) {
         
     }
 
-    @media(max-width: 767px) {
+    /* small desktops */
+    @media(min-width: 1024px) and (max-width: 1680px) {
+
+        header {
+            background-position: 0;
+        }
+
+        > section { 
+
+            > div {
+                flex: 2;
+            }
+
+            &.hero-section {
+                height: 800px;
+                background-position: 0;
+            }
+
+            &.informacoes {
+                height: 800px;
+                background-position-y: -200px;
+
+                .img-container {
+                    flex: 1;
+                }
+            }
+        }
+    }
+
+    /* normal desktops */
+    @media(min-width: 1280px) {
+        
+    }
+
+    /* larger desktops */
+    @media(min-width: 1680px) {
        
     }
 `;

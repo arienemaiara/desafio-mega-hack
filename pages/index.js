@@ -27,11 +27,11 @@ const Home = () => {
 				</div>
       		</section>
 			<section class='descricao'>
-				<div>
+				<div className='img-container'>
 					<img src='img/img_inicio.svg' alt='Imagem principal' />
 				</div>
 				<div>
-					<h2 className="texto-gradient">Bem-vindo ao [nome do projeto]!</h2>
+					<h2 className="texto-gradient">Bem-vindo ao Cuisine Lovers!</h2>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. A
 						molestie arcu pellentesque quis fermentum, consectetur. Adipiscing
@@ -63,7 +63,7 @@ const Home = () => {
 					</p>
 					<Link href='/cadastro'><GradientButton>Cadastre-se</GradientButton></Link>
 				</div>
-				<div>
+				<div className='img-container'>
 					
 				</div>
 			</section>
