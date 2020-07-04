@@ -6,10 +6,17 @@ const Menu = styled.div`
     background-color: #FFF;
     box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.25);
     z-index: 4;
-    display: ${({ open }) => open ? 'block' : 'none'};
+    display: ${({ open }) => open ? 'flex' : 'none'};
+    flex-direction: column;
+    justify-content: space-between;
+
+    header {
+        height: 150px;
+    }
 
     > ul {
         padding: 20px 0;
+        height: 100%;
 
         > li {
             padding: 10px 20px;
@@ -37,8 +44,18 @@ const Menu = styled.div`
         }
     }
 
+    .logo-container {
+        width: 250px;
+        padding: 20px;
+        opacity: 0.9;
+
+        img {
+            width: 100%;
+        }
+    }
+
     @media(min-width: 767px) {
-        display: block;
+        display: flex;
     }
 
     @media(max-width: 767px) {

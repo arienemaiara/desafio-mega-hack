@@ -28,6 +28,9 @@ const MenuRestaurante = ({ open }) => {
                 <Link href='/restaurante/avaliacao'><li><a><img src='../img/menu/avaliacao.svg' />Minhas Avaliações</a></li></Link>
                 <Link href='/restaurante/cardapio'><li><a><img src='../img/menu/cardapio.svg' />Cardápio</a></li></Link>
             </ul>
+            <div className='logo-container'>
+                <img src="../../img/logo.png" /> 
+            </div>
         </Menu>
     )
 

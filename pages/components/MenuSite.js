@@ -34,16 +34,3 @@ const MenuSite = ({ open }) => {
 } 
 
 export default MenuSite;
-
-// const Navbar = () => {
-//     const [open, setOpen] = React.useState(false);
-
-//     return (
-//         <>
-//             <MenuMobile><Burger open={open} setOpen={setOpen} /></MenuMobile>
-//             <MenuSite open={open} setOpen={setOpen} />
-//         </>
-//     )
-// };
-
-// export default Navbar;
