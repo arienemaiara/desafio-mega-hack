@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import cep from 'cep-promise'
 
 import Head from 'next/head';
 import Link from 'next/link';
@@ -10,8 +11,18 @@ import Header from './components/Header';
 import Form from './components/Form';
 import { GradientButton } from './components/Buttons';
 
+import api from '../services/api';
+
 const CadastroParte1 = ({ onSubmit }) => {
     const { register, handleSubmit, errors } = useForm();
+    const [enderecoCEP, setEnderecoCEP] = useState();
+
+    const buscarCep = (e) => {
+        const cepValue = e.target.value;
+        cep(cepValue)
+            .then(setEnderecoCEP)
+            .catch(() => console.log('erro consulta'))
+    }
 
     return (
         <Form onSubmit={handleSubmit(onSubmit)}>
@@ -34,7 +45,8 @@ const CadastroParte1 = ({ onSubmit }) => {
                     <input
                         type="text"
                         name="cep"
-                        ref={register({ required: true })} />
+                        ref={register({ required: true })}
+                        onBlur={buscarCep} />
                     {errors.cep && <span className="erro-campo" >Campo obrigatório</span>}
                 </div>
                 <div>
@@ -42,6 +54,7 @@ const CadastroParte1 = ({ onSubmit }) => {
                     <input
                         type="text"
                         name="endereco"
+                        value={enderecoCEP?.street}
                         ref={register({ required: true })} />
                     {errors.endereco && <span className="erro-campo" >Campo obrigatório</span>}
                 </div>
@@ -61,6 +74,7 @@ const CadastroParte1 = ({ onSubmit }) => {
                     <input
                         type="text"
                         name="bairro"
+                        value={enderecoCEP?.neighborhood}
                         ref={register({ required: true })} />
                     {errors.bairro && <span className="erro-campo" >Campo obrigatório</span>}
                 </div>
@@ -71,6 +85,7 @@ const CadastroParte1 = ({ onSubmit }) => {
                     <input
                         type="text"
                         name="cidade"
+                        value={enderecoCEP?.city}
                         ref={register({ required: true })} />
                     {errors.cidade && <span className="erro-campo" >Campo obrigatório</span>}
                 </div>
@@ -79,6 +94,7 @@ const CadastroParte1 = ({ onSubmit }) => {
                     <input
                         type="text"
                         name="estado"
+                        value={enderecoCEP?.state}
                         ref={register({ required: true })} />
                     {errors.estado && <span className="erro-campo" >Campo obrigatório</span>}
                 </div>
@@ -174,15 +190,29 @@ const CadastroResturante = () => {
 
     const [parteCadastro, setParteCadastro] = useState(1);
     const [subtitulo, setSubtitulo] = useState('Conte-nos um pouco sobre você')
+    const [cadastro1, setCadastro1] = useState();
 
     const onSubmitParte1 = (data) => {
-        console.log(data);
+        setCadastro1(data);
         setParteCadastro(2);
         setSubtitulo('Agora vamos falar de capacidade e segurança')
     };
 
-    const onSubmitParte2 = (data) => {
+    const onSubmitParte2 = async (data) => {
+        console.log(cadastro1);
         console.log(data);
+
+        const formData = {...cadastro1, ...data}
+
+        const response = await api.post('/restaurantes', formData);
+
+        if (response.status === 201) {
+            //Grava informação do restaurante no local storage
+            localStorage.setItem('restaurante', response.data);
+        }
+        else {
+
+        }
     };
 
     return (
