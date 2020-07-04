@@ -20,11 +20,12 @@ const MenuSite = ({ open }) => {
     return (
         <Navbar open={open}>
             <div>
-                
+                <div className='logo-container'>
+                    <img className='img_logo' src='img/logo.png' />
+                </div>
             </div>
             <ul>
-                <Link href='/dd'><li><a>Sobre</a></li></Link>
-                <Link href='/'><li><a>Contato</a></li></Link>
+                <Link href='/'><li><a>Sobre</a></li></Link>
                 <Link href='/'><li><GradientButton>Login</GradientButton></li></Link>
             </ul>
         </Navbar>

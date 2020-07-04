@@ -12,6 +12,14 @@ const Navbar = styled.nav`
         flex: 1;
     }
 
+    .logo-container {
+        width: 150px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        margin-left: 50px;
+    }
+
     ul {
         display: flex;
         flex: 1;
