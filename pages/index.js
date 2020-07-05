@@ -67,13 +67,11 @@ const Home = () => {
 				<div>
 					<h2 className="texto-gradient">Novas experiências de restaurantes</h2>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. A
-						molestie arcu pellentesque quis fermentum, consectetur. Adipiscing
-						a, venenatis facilisis sed. Nulla integer pellentesque nisi
-						consequat posuere imperdiet tincidunt suspendisse sed. Nibh nulla
-						pharetra maecenas sit cursus cursus vitae. A nunc accumsan
-						lobortis aliquet sed risus commodo facilisis in. Dui congue mauris
-						consequat id.
+					Com nossas métricas cuidadosas de cadastro, o restaurante precisa seguir passos de higienização 
+					e proteção aos clientes antes de funcionar na plataforma. 
+					Além disso, com um sistema inteligente de reservas e fila de espera, você acompanha em tempo real 
+					a lotação de seu restaurante favorito. Somado a isso, um sistemas de avaliação seguro para você 
+					passar a ter ainda mais confiança antes de sair de casa.
 					</p>
 					<Link href='/cadastro'><GradientButton>Cadastre-se</GradientButton></Link>
 				</div>

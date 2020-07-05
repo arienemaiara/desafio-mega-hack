@@ -11,7 +11,30 @@ const Menu = styled.div`
     justify-content: space-between;
 
     header {
-        height: 150px;
+        display: flex;
+        padding: 20px;
+
+        .avatar {
+            width: 64px;
+            height: 64px;
+            margin-right: 10px;
+            background: #877;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 20px;
+        }
+
+        h1 {
+            font-size: 14px;
+            line-height: 18px;
+            letter-spacing: 0.428571px;
+        }
+
+        .avaliacoes {
+            p {
+                font-size: 12px;
+                color: #7B7B7B;
+            }
+        }
     }
 
     > ul {

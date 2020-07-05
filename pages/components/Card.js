@@ -17,6 +17,15 @@ const Card = styled.div`
         margin: 10px 0;
     }
 
+    &.painel-reserva {
+        display: flex;
+        flex-direction: row;
+
+        > div {
+            flex: 1;
+        }
+    }
+
     .info-numero {
         font-size: 22px;
         font-weight: 500;

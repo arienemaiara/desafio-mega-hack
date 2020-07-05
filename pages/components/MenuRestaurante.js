@@ -19,6 +19,20 @@ const MenuRestaurante = ({ open }) => {
     return (
         <Menu open={open}>
             <header>
+                <div className='avatar'></div>
+                <div>
+                    <h1>Cidadão do Mundo</h1>
+                    <div className='avaliacoes'>
+                        <div className='estrelas'>
+                            <img src='../img/estrela_laranja.svg' />
+                            <img src='../img/estrela_laranja.svg' />
+                            <img src='../img/estrela_laranja.svg' />
+                            <img src='../img/estrela_laranja.svg' />
+                            <img src='../img/estrela_cinza.svg' />
+                        </div>
+                        <p>50 avaliações</p>
+                    </div>
+                </div>
 
             </header>
             <ul>
@@ -30,7 +44,7 @@ const MenuRestaurante = ({ open }) => {
                 <Link href='/'><li><a>Sair</a></li></Link>
             </ul>
             <div className='logo-container'>
-                <img src="../../img/logo.png" /> 
+                <img src="../../img/logo.png" />
             </div>
         </Menu>
     )

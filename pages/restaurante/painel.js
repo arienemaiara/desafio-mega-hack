@@ -7,16 +7,12 @@ import CardsPedidos from '../components/CardsPedidos';
 import Card from '../components/Card';
 import ProgressBar from '../components/ProgressBar';
 import { OutlineButton } from '../components/Buttons'; 
+import Mesa from '../components/Mesa';
 
-const Pedido = () => (
+const Pedido = (props) => (
     <Card>
         <p>Tempo de espera: <span className="highlight">30 min</span></p>
-        <h3>Mesa <strong>6</strong></h3>
-        <ul>
-            <li><strong>1</strong> Porção de fritas</li>
-            <li><strong>1</strong> Porção de fritas</li>
-            <li><strong>1</strong> Porção de fritas</li>
-        </ul>
+        {props.children}
         <div className="buttonLine">
             <OutlineButton danger>Cancelar Pedido</OutlineButton>
             <OutlineButton success>Fechar Comanda</OutlineButton>
@@ -44,13 +40,12 @@ const Painel = () => {
                 <div>
                     <section>
                         <h2>Reservas</h2>
-                        <Card>
-                            <div>
-
-                            </div>
+                        <Card className='painel-reserva'>
+                            <Mesa />
                             <div>
                                 <p>Você ainda tem</p>
-                                <p><strong className="highlight">3</strong> mesas disponíveis para</p>
+                                <strong className="highlight">3</strong>
+                                <p>mesas disponíveis para</p>
                                 <strong className="highlight">02/07/2020</strong>
                             </div>
                         </Card>
@@ -59,18 +54,18 @@ const Painel = () => {
                         <h2>Capacidade</h2>
                         <Card>
                             <div className="progressBarContainer">
-                                <p>80%</p>
-                                <ProgressBar width={80} />
+                                <p>30%</p>
+                                <ProgressBar width={30} />
                             </div>
                             <hr />
                             <div className="row">
                                 <div>
                                     <h4>Pessoas</h4>
-                                    <strong className="info-numero">150</strong>
+                                    <strong className="info-numero">20</strong>
                                 </div>
                                 <div>
                                     <h4>Mesas reservadas</h4>
-                                    <strong className="info-numero">5</strong>
+                                    <strong className="info-numero">3</strong>
                                 </div>
                             </div>
                         </Card>
@@ -79,14 +74,31 @@ const Painel = () => {
                 <section>
                     <h2>Próximos pedidos</h2>
                     <CardsPedidos>
-                        <Pedido />
-                        <Pedido />
-                        <Pedido />
-                        <Pedido />
-                        <Pedido />
-                        <Pedido />
-                        <Pedido />
-                        <Pedido />
+                        <Pedido>
+                            <h3>Mesa <strong>1</strong></h3>
+                            <ul>
+                                <li><strong>1</strong> Porção de fritas</li>
+                                <li><strong>2</strong> Chopps Brahma</li>
+                                <li><strong>3</strong> Espetinho de carne</li>
+                            </ul>
+                        </Pedido>
+                        <Pedido>
+                            <h3>Mesa <strong>3</strong></h3>
+                            <ul>
+                                <li><strong>2</strong> Parmeggiana de frango</li>
+                                <li><strong>1</strong> Limonada pequena</li>
+                                <li><strong>1</strong> Coca-cola lata</li>
+                            </ul>
+                        </Pedido>
+                        <Pedido>
+                            <h3>Mesa <strong>5</strong></h3>
+                            <ul>
+                                <li><strong>3</strong> Espetinho de frango</li>
+                                <li><strong>2</strong> Chopps Brahma</li>
+                                <li><strong>3</strong> Espetinho de carne</li>
+                            </ul>
+                        </Pedido>
+                        
                     </CardsPedidos>
                 </section>
             </Container>
