@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { Container } from './components/Site';
 import MenuSite from './components/MenuSite';
 import { GradientButton } from './components/Buttons';
+import Card from './components/Card';
 
 const Home = () => {
 	return (
@@ -18,7 +19,9 @@ const Home = () => {
 				<div>
 					<h1>Os melhores restaurantes <strong>estão aqui</strong></h1>
 					<h3>
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, laudantium adipisci qui quaerat veniam esse odit! Illum quo culpa labore! Tempore modi eaque nobis aut ex cupiditate voluptatum eum a?
+						Encontre seu restaurante preferido mais perto de você!
+						Além da reserva antecipada - para não correr o risco de ficar sem lugar -, visualize o cardápio completo e tenha sua refeição pronta poucos minutos depois da sua chegada no restaurante!
+						Prezamos pela sua segurança e pelo seu tempo!
 					</h3>
 					<Link href='/cadastro'><a>Cadastre-se</a></Link>
 				</div>
@@ -33,21 +36,32 @@ const Home = () => {
 				<div>
 					<h2 className="texto-gradient">Bem-vindo ao Cuisine Lovers!</h2>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. A
-						molestie arcu pellentesque quis fermentum, consectetur. Adipiscing
-						a, venenatis facilisis sed. Nulla integer pellentesque nisi
-						consequat posuere imperdiet tincidunt suspendisse sed. Nibh nulla
-						pharetra maecenas sit cursus cursus vitae. A nunc accumsan
-						lobortis aliquet sed risus commodo facilisis in. Dui congue mauris
-						consequat id.
+					Para os amantes de restaurante e também para quem precisa fazer as refeições fora de casa, no Cousine você tem um ambiente seguro e ágil para manter sua rotina e suas atividades dentro da previsão!
+					Viajou e não sabe onde comer? Verifique com antecedência no COUSINE e reserve sua mesa!
+					Aniversário da vovó que adora aquele prato especial? Acesse o cardápio do estabelecimento e já programe o horário de chegada para receber os pratos mais rápido.
 					</p>
 					<Link href='/cadastro'><GradientButton>Cadastre-se</GradientButton></Link>
 				</div>
 			</section>
 			<section className='informacoes'>
-				<div>
-					
-				</div>
+				<Card>
+					<div className='row title'>
+						<div><strong>Reserve</strong></div>
+						<div><strong>Acompanhe pedidos</strong></div>
+						<div><strong>Melhores avaliações</strong></div>
+					</div>
+					<div className='row'>
+						<div>
+							<img src='img/reserve.svg' alt='Reserve' />
+						</div>
+						<div>
+							<img src='img/acompanhe_pedidos.svg' alt='Acompanhe pedidos' />
+						</div>
+						<div>
+							<img src='img/avaliacoes.svg' alt='Melhores avaliações' />
+						</div>
+					</div>
+				</Card>
 			</section>
 			<section className='call-to-action'>
 				<div>

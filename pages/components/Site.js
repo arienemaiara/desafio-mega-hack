@@ -94,6 +94,29 @@ export const Container = styled.div`
             background-size: cover;
             background-position-y: -360px;
             height: 1400px;
+            justify-content: center;
+            align-items: center;
+
+            .title {
+                font-size: 18px;
+                text-transform: uppercase;
+                text-align: center;
+                color: var(--primary);
+
+                border-bottom: 1px solid #ddd;
+                padding-bottom: 30px;
+                margin-bottom: 30px;
+
+                > div {
+                    flex: 1;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            .row { 
+                justify-content: space-around;
+            }
 
         }
 
