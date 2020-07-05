@@ -20,14 +20,14 @@ const Home = () => {
 					<h1>Os melhores restaurantes <strong>estão aqui</strong></h1>
 					<h3>
 						Encontre seu restaurante preferido mais perto de você!
-						Além da reserva antecipada - para não correr o risco de ficar sem lugar -, visualize o cardápio completo e tenha sua refeição pronta poucos minutos depois da sua chegada no restaurante!
+						Além da reserva antecipada - para não correr o risco de ficar sem lugar, visualize o cardápio completo e tenha sua refeição pronta poucos minutos depois da sua chegada no restaurante!
 						Prezamos pela sua segurança e pelo seu tempo!
 					</h3>
 					<Link href='/cadastro'><a>Cadastre-se</a></Link>
 				</div>
-				<div className='img-container'>
+				{/* <div className='img-container'>
 					<img src='img/hero-img.png' alt='Imagem principal' />
-				</div>
+				</div> */}
       		</section>
 			<section class='descricao'>
 				<div className='img-container'>
@@ -67,16 +67,16 @@ const Home = () => {
 				<div>
 					<h2 className="texto-gradient">Novas experiências de restaurantes</h2>
 					<p>
-					Com nossas métricas cuidadosas de cadastro, o restaurante precisa seguir passos de higienização 
-					e proteção aos clientes antes de funcionar na plataforma. 
-					Além disso, com um sistema inteligente de reservas e fila de espera, você acompanha em tempo real 
-					a lotação de seu restaurante favorito. Somado a isso, um sistemas de avaliação seguro para você 
+					Com nossas métricas cuidadosas de cadastro, o restaurante precisa seguir passos de higienização
+					e proteção aos clientes antes de funcionar na plataforma.
+					Além disso, com um sistema inteligente de reservas e fila de espera, você acompanha em tempo real
+					a lotação de seu restaurante favorito. Somado a isso, um sistemas de avaliação seguro para você
 					passar a ter ainda mais confiança antes de sair de casa.
 					</p>
 					<Link href='/cadastro'><GradientButton>Cadastre-se</GradientButton></Link>
 				</div>
 				<div className='img-container'>
-					
+
 				</div>
 			</section>
 		</Container>

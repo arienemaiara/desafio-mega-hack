@@ -86,6 +86,13 @@ const Card = styled.div`
             margin: 10px 0;
         }
 
+        .descricao {
+            text-align: center;
+            font-size: 12px;
+            color: var(--textGray);
+            margin-bottom: 10px;
+        }
+
         .preco {
             font-weight: 500;
             text-align: center;

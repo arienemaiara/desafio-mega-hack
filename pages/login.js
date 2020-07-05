@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Head from 'next/head';
+import Link from 'next/link';
 
 import { Container } from './components/Site';
 import MenuSite from './components/MenuSite';
@@ -24,7 +25,7 @@ const Login = () => {
                     <input type="text" name="email" />
                     <label>Senha</label>
                     <input type="password" name="senha" />
-                    <GradientButton>Entrar</GradientButton>
+                    <Link href='/restaurante/painel'><GradientButton>Entrar</GradientButton></Link>
                 </Form>
             </section>
         </Container>

@@ -216,6 +216,8 @@ export const Container = styled.div`
 
         > section {
 
+            margin-bottom: 30px;
+
             > div {
                 padding: 10px;
             }
@@ -259,7 +261,7 @@ export const Container = styled.div`
 
         .form-cadastro {
             width: 100%;
-            padding: 0;
+            padding: 10px;
             margin: 20px 0 40px;
         }
 

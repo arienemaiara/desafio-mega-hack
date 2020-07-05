@@ -34,6 +34,13 @@ const CadastroParte1 = ({ onSubmit }) => {
                 ref={register({ required: true })} />
             {errors.nome && <span className="erro-campo" >Campo obrigatório</span>}
 
+            <label>E-mail</label>
+            <input
+                type="text"
+                name="email"
+                ref={register({ required: true })} />
+            {errors.email && <span className="erro-campo" >Campo obrigatório</span>}
+
             <label>Telefone principal</label>
             <input
                 type="text"
@@ -207,8 +214,8 @@ const CadastroRestaurante = () => {
         if (response.status === 201) {
             //Grava informação do restaurante no local storage
             localStorage.setItem('restaurante', JSON.stringify(response.data));
-            toast.success('Dados cadastrados com sucesso!');
-            Router.push('/restaurante/painel');
+            toast.success('Dados cadastrados com sucesso! Efetue o login para entrar no sistema.');
+            Router.push('/login');
         }
         else {
             toast.error('Erro ao cadastrar os dados. Tente novamente.')
