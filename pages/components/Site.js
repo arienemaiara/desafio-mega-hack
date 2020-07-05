@@ -185,6 +185,15 @@ export const Container = styled.div`
         margin-top: -80px;
     }
 
+    .info-login {
+        align-items: center;
+        
+        form {
+            width: 400px;
+            margin-top: 50px; 
+        }
+    }
+
     /* cellphones */
     @media(max-width: 768px) {
 

@@ -26,7 +26,7 @@ const MenuSite = ({ open }) => {
             </div>
             <ul>
                 {/* <Link href='/'><li><a>Sobre</a></li></Link> */}
-                <Link href='/'><li><GradientButton>Login</GradientButton></li></Link>
+                <Link href='/login'><li><GradientButton>Login</GradientButton></li></Link>
             </ul>
         </Navbar>
     )
